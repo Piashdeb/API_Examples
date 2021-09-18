@@ -1,3 +1,16 @@
+var searchBtn = document.getElementById("button-search");
+var searchInput = document.getElementById("search-field");
+
+searchInput.addEventListener("keypress", function (event) {
+    // event.preventDefault();
+    if (event.key === 'Enter') {
+        searchBtn.click();
+    }
+
+});
+
+
+
 const searchFood = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -59,7 +72,7 @@ const loadMealDetail = async mealId => {
 const displayMealDetail = meal => {
     console.log(meal);
     const mealDetails = document.getElementById('meal-details');
-    mealDetails.textContent ='';
+    mealDetails.textContent = '';
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
