@@ -17,8 +17,11 @@ const displayCountries = countries => {
         div.innerHTML = `
         <h3>${country.name}</h3>
         <p>${country.capital}</p>
-        <button onclick=loadCountryByName('${country.name}')>Details</button>
+        <img width="200px" src="${country.flag}">
         `
+        // <button onclick=loadCountryByName('${country.name}')>Details</button>
+
+        
         // const h3 = document.createElement('h3');
         // div.innerText = country.name;
         // div.appendChild(h3);
@@ -40,7 +43,7 @@ const displayCountryDetail = country =>{
     countrydiv.innerHTML = `
     <h5>${country.name}</h5>
     <p>Population: ${country.population}</p>
-    <img width="200px" src="${country.flag}">
 
     `
+    // <img width="200px" src="${country.flag}">
 }
